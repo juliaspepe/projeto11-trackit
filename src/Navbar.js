@@ -1,11 +1,14 @@
-import usuario from "./img/fotoUsuario.png"
+import { useContext } from "react"
 import styled from "styled-components"
+import { InfoContext } from "./InfoContext"
 
 export default function Navbar() {
+const {image, config} = useContext(InfoContext)
+
     return (
         <ContainerNavbar>
             <Logo>TrackIt</Logo>
-            <Usuario src={usuario} alt="Foto do usuário" />
+            <Usuario data-identifier="avatar" src={image} alt="Foto do usuário" />
         </ContainerNavbar>
     )
 }
@@ -37,4 +40,5 @@ const Usuario = styled.img`
 width: 51px;
 height: 51px;
 margin-right: 18px;
+border-radius: 98.5px;
 `

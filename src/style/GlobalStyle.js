@@ -29,12 +29,13 @@ footer, header, hgroup, menu, nav, section {
 
 *{
 	box-sizing: border-box;   
+	text-decoration: none;
 }
 
 body {
 	line-height: 1;
 	background-color: #E5E5E5; 
-	height: 100%;
+	height: 700px;
 }
 ol, ul {
 	list-style: none;

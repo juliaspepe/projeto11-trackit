@@ -1,13 +1,20 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 export default function Footer() {
     return (
         <ContainerFooter>
-            <p>Hábitos</p>
+            <Link data-identifier="habit-page-action" to={'/habitos'}>
+                <p>Hábitos</p>
+            </Link>
             <Circle>
-                <p>Hoje</p>
+                <Link to={'/hoje'}>
+                    <p>Hoje</p>
+                </Link>
             </Circle>
-            <p>Histórico</p>
+            <Link to={'/historico'}>
+                <p data-identifier="historic-page-action">Histórico</p>
+            </Link>
         </ContainerFooter>
     )
 }
